@@ -12,32 +12,36 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar bg-white shadow-md px-8'>
+    <nav className='w-full flex py-4 sm:py-6 justify-between items-center navbar bg-white shadow-md px-4 sm:px-8'>
       {/* Logo/Brand */}
-      <h1
+      <div
         onClick={() => navigate('/')}
-        className='font-poppins font-bold text-darkGray cursor-pointer'
+        className='cursor-pointer'
       >
-        <span className='text-gradient text-[18px] sm:text-[20px]'>CollectHub IT Solutions PVT.LTD</span>
-      </h1>
+        <img
+          src='/Collect-hub-logo-png.png'
+          alt='CollectHub IT Solutions'
+          className='h-10 sm:h-12 md:h-14 object-contain'
+        />
+      </div>
 
-      {/* Navigation Links */}
-      <ul className='list-none flex justify-end items-center gap-8'>
+      {/* Navigation Links - Hidden on mobile, visible on tablet+ */}
+      <ul className='list-none hidden md:flex justify-end items-center gap-4 lg:gap-8'>
         <li
           onClick={() => scrollToSection('home')}
-          className='font-poppins font-medium cursor-pointer text-[15px] text-darkGray hover:text-primary transition-all'
+          className='font-poppins font-medium cursor-pointer text-[14px] lg:text-[15px] text-darkGray hover:text-primary transition-all'
         >
           Home
         </li>
         <li
           onClick={() => scrollToSection('payment-info')}
-          className='font-poppins font-medium cursor-pointer text-[15px] text-darkGray hover:text-primary transition-all'
+          className='font-poppins font-medium cursor-pointer text-[14px] lg:text-[15px] text-darkGray hover:text-primary transition-all'
         >
           Why Choose Us
         </li>
         <li
           onClick={() => scrollToSection('substores')}
-          className='font-poppins font-medium cursor-pointer text-[15px] text-darkGray hover:text-primary transition-all'
+          className='font-poppins font-medium cursor-pointer text-[14px] lg:text-[15px] text-darkGray hover:text-primary transition-all'
         >
           Substores
         </li>

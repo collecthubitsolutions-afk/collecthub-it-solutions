@@ -3,7 +3,7 @@ import { substores } from '../constants';
 import styles from '../style';
 
 const SubStoreCard = ({ substore }) => {
-  const { name, description, category, rating, productsCount, image, featured } = substore;
+  const { name, description, category, rating, productsCount, featured } = substore;
 
   return (
     <div className="bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border border-lightGray relative">
@@ -13,13 +13,11 @@ const SubStoreCard = ({ substore }) => {
         </div>
       )}
 
-      {/* Store Image */}
-      <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-primary">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+      {/* Store Image Placeholder */}
+      <div className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
       </div>
 
       {/* Store Info */}
@@ -55,31 +53,31 @@ const SubStores = () => {
   const featuredSubstores = substores.filter(store => store.featured);
 
   return (
-    <section id="substores" className={`${styles.paddingY} ${styles.flexCenter} bg-lightGray`}>
+    <section id="substores" className={`${styles.paddingY} ${styles.paddingX} ${styles.flexCenter} bg-lightGray`}>
       <div className={`${styles.boxWidth}`}>
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-darkGray mb-3">
+        <div className="text-center mb-8 sm:mb-10 px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-darkGray mb-3">
             Explore Our <span className="text-gradient">Substores</span>
           </h2>
-          <p className="text-gray-500 text-[15px] max-w-2xl mx-auto">
+          <p className="text-gray-500 text-[14px] sm:text-[15px] max-w-2xl mx-auto">
             Shop from our curated collection of trusted sellers and brands
           </p>
         </div>
 
         {/* Substores Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {featuredSubstores.map((substore) => (
             <SubStoreCard key={substore.id} substore={substore} />
           ))}
         </div>
 
         {/* View All Substores Button */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8 sm:mt-10 px-4">
           <div className='relative inline-block'>
             <button
               disabled
-              className="bg-gray-300 text-gray-500 px-6 py-3 rounded-lg font-semibold text-[15px] cursor-not-allowed shadow-md"
+              className="bg-gray-300 text-gray-500 px-4 sm:px-6 py-3 rounded-lg font-semibold text-[14px] sm:text-[15px] cursor-not-allowed shadow-md"
             >
               View All Substores
             </button>

@@ -45,11 +45,11 @@ const PaymentInfo = () => {
     <section id='payment-info' className={`${styles.paddingY} ${styles.paddingX} ${styles.flexCenter} bg-lightGray`}>
       <div className={`${styles.boxWidth}`}>
         {/* Section Header */}
-        <div className='text-center mb-12'>
-          <h2 className='text-3xl font-bold text-darkGray mb-3'>
+        <div className='text-center mb-8 sm:mb-12 px-4'>
+          <h2 className='text-2xl sm:text-3xl font-bold text-darkGray mb-3'>
             Why Choose Our <span className='text-gradient'>Payment Solution</span>
           </h2>
-          <p className='text-gray-600 text-[15px] max-w-2xl mx-auto'>
+          <p className='text-gray-600 text-[14px] sm:text-[15px] max-w-2xl mx-auto'>
             Simple, secure, and reliable payment collection for your business needs
           </p>
         </div>
