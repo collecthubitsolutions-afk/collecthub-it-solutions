@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../style'
-import { socialMedia } from '../constants'
 
 const Footer = () => {
   return (
@@ -13,7 +12,7 @@ const Footer = () => {
             <div className='max-w-2xl'>
               <div className='flex justify-center mb-4'>
                 <img
-                  src='/Collect-hub-logo-png.png'
+                  src='/Web-Collect-hub-logo-png.png'
                   alt='CollectHub IT Solutions'
                   className='h-12 sm:h-16 object-contain'
                 />
@@ -28,8 +27,8 @@ const Footer = () => {
                   <svg className='w-4 h-4 text-primary flex-shrink-0' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                   </svg>
-                  <a href='mailto:info@collecthub.com' className='text-[11px] sm:text-[12px] text-gray-600 hover:text-primary transition-all break-all'>
-                    info@collecthub.com
+                  <a href='mailto:collecthubitsolutions@gmail.com' className='text-[11px] sm:text-[12px] text-gray-600 hover:text-primary transition-all break-all'>
+                    collecthubitsolutions@gmail.com
                   </a>
                 </div>
                 <div className='flex items-start gap-2 justify-center'>
@@ -46,27 +45,10 @@ const Footer = () => {
           </div>
 
           {/* Bottom Footer */}
-          <div className='pt-4 sm:pt-6 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 px-4'>
+          <div className='pt-4 sm:pt-6 border-t border-gray-300 flex justify-center items-center px-4'>
             <p className='font-poppins text-[11px] sm:text-[12px] text-gray-600 text-center'>
               © 2024 CollectHub IT Solutions. All Rights Reserved.
             </p>
-            <div className='flex gap-4'>
-              {socialMedia.map((social) => (
-                <a
-                  href={social.link}
-                  key={social.id}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-8 h-8 flex items-center justify-center rounded-full bg-white hover:bg-primary transition-all border border-gray-300'
-                >
-                  <img
-                    src={social.icon}
-                    alt={social.id}
-                    className='w-4 h-4 object-contain'
-                  />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>

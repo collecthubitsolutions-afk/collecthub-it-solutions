@@ -19,7 +19,7 @@ const Navbar = () => {
         className='cursor-pointer'
       >
         <img
-          src='/Collect-hub-logo-png.png'
+          src='/Web-Collect-hub-logo-png.png'
           alt='CollectHub IT Solutions'
           className='h-10 sm:h-12 md:h-14 object-contain'
         />

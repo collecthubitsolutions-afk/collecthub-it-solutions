@@ -3,7 +3,7 @@ import { substores } from '../constants';
 import styles from '../style';
 
 const SubStoreCard = ({ substore }) => {
-  const { name, description, category, rating, productsCount, featured } = substore;
+  const { name, description, category, rating, productsCount, featured, url, logo } = substore;
 
   return (
     <div className="bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border border-lightGray relative">
@@ -13,11 +13,19 @@ const SubStoreCard = ({ substore }) => {
         </div>
       )}
 
-      {/* Store Image Placeholder */}
-      <div className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-        </svg>
+      {/* Store Image */}
+      <div className="w-32 h-32 rounded-full mx-auto mb-4 bg-white flex items-center justify-center overflow-hidden">
+        {logo ? (
+          <img
+            src={logo}
+            alt={name}
+            className="w-full h-full object-contain"
+          />
+        ) : (
+          <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        )}
       </div>
 
       {/* Store Info */}
@@ -26,24 +34,23 @@ const SubStoreCard = ({ substore }) => {
         <p className="text-[13px] text-primary font-medium mb-2">{category}</p>
         <p className="text-gray-500 text-[13px] mb-4">{description}</p>
 
-        {/* Rating and Products Count */}
-        <div className="flex items-center justify-center gap-4 mb-4">
+        {/* Rating */}
+        <div className="flex items-center justify-center mb-4">
           <div className="flex items-center gap-1">
             <span className="text-primary text-[14px]">★</span>
             <span className="text-[13px] font-semibold text-darkGray">{rating}</span>
           </div>
-          <div className="text-[13px] text-gray-500">
-            {productsCount} Products
-          </div>
         </div>
 
         {/* Visit Store Button */}
-        <button
-          disabled
-          className="w-full bg-gray-300 text-gray-500 py-2 rounded-lg font-semibold text-[14px] cursor-not-allowed"
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-primary text-white py-2 rounded-lg font-semibold text-[14px] hover:bg-secondary transition-all duration-300 block"
         >
-          Coming Soon
-        </button>
+          Visit Store
+        </a>
       </div>
     </div>
   );
@@ -72,20 +79,6 @@ const SubStores = () => {
           ))}
         </div>
 
-        {/* View All Substores Button */}
-        <div className="flex justify-center mt-8 sm:mt-10 px-4">
-          <div className='relative inline-block'>
-            <button
-              disabled
-              className="bg-gray-300 text-gray-500 px-4 sm:px-6 py-3 rounded-lg font-semibold text-[14px] sm:text-[15px] cursor-not-allowed shadow-md"
-            >
-              View All Substores
-            </button>
-            <span className='absolute -top-2 -right-2 bg-primary text-white text-[11px] px-2 py-0.5 rounded-full font-semibold'>
-              Coming Soon
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
