@@ -8,13 +8,13 @@ const Hero = () => {
   return (
     <section id='home' className={`${styles.paddingY} bg-white`}>
       <div className={`${styles.flexCenter} flex-col text-center xl:px-0 sm:px-16 px-6`}>
-        <div className='inline-flex items-center py-[6px] px-4 bg-orange-gradient rounded-[10px] mb-4 shadow-md'>
-          <svg className='w-[32px] h-[32px] text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+        <div className='inline-flex items-center py-[6px] px-4 bg-orange-gradient rounded-[10px] mb-4 shadow-md animate-bounce-slow'>
+          <svg className='w-[32px] h-[32px] text-white animate-pulse' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z' />
           </svg>
           <p className='ml-2 text-[14px] font-medium'>
-            <span className='text-white'>Multiple Stores</span>{" "}
-            <span className='text-white'>One Platform</span>
+            <span className='text-white inline-block animate-fade-in-up'>Multiple Stores</span>{" "}
+            <span className='text-white inline-block animate-fade-in-up animation-delay-200'>One Platform</span>
           </p>
         </div>
 
@@ -24,20 +24,10 @@ const Hero = () => {
         </h1>
 
         <p className='text-gray-600 text-[14px] sm:text-[15px] leading-[22px] sm:leading-[24px] max-w-2xl mt-5 px-4'>
-          Discover amazing products from multiple trusted stores all in one place. Shop from our curated collection of verified sellers offering quality products with secure Easypaisa & JazzCash payment options.
+          Discover amazing products from multiple trusted stores all in one place. Shop from our curated collection of verified sellers offering quality products with secure <span className='font-bold text-green-600'>Easypaisa</span> & <span className='font-bold text-red-600'>JazzCash</span> payment options.
         </p>
 
-        {/* Payment Method Badges */}
-        <div className='flex gap-3 sm:gap-4 mt-6 sm:mt-8 flex-wrap justify-center items-center px-4'>
-          <div className='bg-gradient-to-r from-green-500 to-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-bold text-[14px] sm:text-[16px] shadow-lg'>
-            Easypaisa
-          </div>
-          <div className='bg-gradient-to-r from-red-500 to-red-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-bold text-[14px] sm:text-[16px] shadow-lg'>
-            JazzCash
-          </div>
-        </div>
-
-        <div className='flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 w-full max-w-md px-4'>
+        <div className='flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 w-full max-w-md px-4 mx-auto justify-center'>
           <button
             onClick={() => document.getElementById('substores')?.scrollIntoView({ behavior: 'smooth' })}
             className='bg-primary text-white px-6 sm:px-8 py-3 rounded-lg font-semibold text-[14px] sm:text-[15px] hover:bg-secondary transition-all duration-300 shadow-md w-full sm:w-auto'

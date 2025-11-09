@@ -65,7 +65,7 @@ const SubStores = () => {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-10 px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-darkGray mb-3">
-            Explore Our <span className="text-gradient">Substores</span>
+            Explore Our <span className="text-gradient">Clients</span>
           </h2>
           <p className="text-gray-500 text-[14px] sm:text-[15px] max-w-2xl mx-auto">
             Shop from our curated collection of trusted sellers and brands
