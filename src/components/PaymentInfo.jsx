@@ -77,9 +77,11 @@ const PaymentInfo = () => {
           {/* Easypaisa */}
           <div className='bg-white rounded-lg p-8 border-2 border-green-500 hover:shadow-xl transition-all duration-300'>
             <div className='flex items-center gap-3 mb-4'>
-              <div className='bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-bold text-[18px]'>
-                Easypaisa
-              </div>
+              <img
+                src='/Easypaisa Logo.jpg'
+                alt='Easypaisa'
+                className='h-16 object-contain'
+              />
               <span className='bg-primary text-white px-3 py-1 rounded-full text-[12px] font-semibold'>
                 Coming Soon
               </span>
@@ -112,9 +114,11 @@ const PaymentInfo = () => {
           {/* JazzCash */}
           <div className='bg-white rounded-lg p-8 border-2 border-red-500 hover:shadow-xl transition-all duration-300'>
             <div className='flex items-center gap-3 mb-4'>
-              <div className='bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-lg font-bold text-[18px]'>
-                JazzCash
-              </div>
+              <img
+                src='/JazzCash New Logo PNG, SVG, AI Vector – Free Download.jpg'
+                alt='JazzCash'
+                className='h-16 object-contain'
+              />
               <span className='bg-primary text-white px-3 py-1 rounded-full text-[12px] font-semibold'>
                 Coming Soon
               </span>
